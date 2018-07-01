@@ -67,9 +67,9 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, './client', 'build')));
 }
 // imports in ./routes/index.js (contains API and VIEW routes);
-// const routes = require("./routes");
+const routes = require("./routes");
 // Sets express to use routes
-// app.use(routes);
+app.use(routes);
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, './client', 'build', 'index.html'));
 });
