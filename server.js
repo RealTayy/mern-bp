@@ -64,14 +64,11 @@ db.once("open", () => {
 |*****************/
 // Setup app to serve static files from React App depending on dev/prod
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, './client', 'build')));
+	app.use(express.static(path.join(__dirname, './client', 'build')));
 }
 // imports in ./routes/index.js (contains API and VIEW routes);
-const routes = require("./routes");
+// const routes = require("./routes/routes.js");
 // Sets express to use routes
-app.use(routes);
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, './client', 'build', 'index.html'));
-});
+// app.use(routes);
 
 app.listen(PORT, () => { console.log(`App listening on PORT: ${PORT}`) });
