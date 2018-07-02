@@ -9,6 +9,12 @@ class XPageTwo extends Component {
     string: 'XPageTwoString',
   };
 
+  componentDidMount() {
+    API.getDocuments()
+      .then((res) => { console.log(res.data) })
+      .catch((err) => console.log(err));
+  }
+
   render() {
     return (<div>
       <Link to={"/"}>
