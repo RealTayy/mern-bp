@@ -6,6 +6,6 @@ router.use("/books", bookRoutes);
 
 router
 	.route('/test')
-	.get(res.send('hi'));
+	.get((req, res) => res.send('hi'));
 
 module.exports = router;
