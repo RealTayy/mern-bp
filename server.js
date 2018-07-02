@@ -1,7 +1,6 @@
 /***************|
 |* DEPENDECIES *|
 |***************/
-// npm i express mongoose body-parser morgan request cheerio bluebird dotenv
 /* GENERAL */
 // Utilities for working with file and directory paths
 const path = require('path');
@@ -45,7 +44,7 @@ app.use(logger('dev'));
 |* SET UP DATABASE *| 
 |*******************/
 // Connect to db
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/boilerPlateDB";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mern-bp-DB";
 mongoose.connect(MONGODB_URI);
 const db = mongoose.connection;
 
