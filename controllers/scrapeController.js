@@ -7,8 +7,14 @@ const request = require('request');
 // scraper that implements jQuery
 const cheerio = require('cheerio');
 
-/* IMPORTS IN DB MODELS*/
+/**********************|
+|*  Imports In model  *|
+|**********************/
 const db = require("../models");
+
+/***************************|
+|*  Methods for controller *|
+|***************************/
 const scrapeController = {
 	scrapeURL: function (req, res) {
 		// Do stuff to scrape a webpage in here...
@@ -17,4 +23,7 @@ const scrapeController = {
 	}
 }
 
+/***********|
+|* EXPORTS *|
+|***********/
 module.exports = scrapeController;

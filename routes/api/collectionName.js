@@ -12,8 +12,7 @@ const router = require("express").Router();
 const collectionNameController = require("../../controllers/collectionNameController.js");
 
 // Matches with "/api/collectionName" this is defined in "../index.js"
-router.route("/")
-  // .get(collectionNameController.findAll)
+router.route("/")  
   .get(collectionNameController.findAll)
   .post(collectionNameController.create);
 

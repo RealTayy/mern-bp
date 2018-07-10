@@ -1,6 +1,11 @@
-/* IMPORTS IN DB MODELS*/
+/**********************|
+|*  Imports In model  *|
+|**********************/
 const db = require("../models");
-// Defining methods for the booksController
+
+/***************************|
+|*  Methods for controller *|
+|***************************/
 const CollectionNameController = {
   findAll: function (req, res) {
     db.CollectionName
@@ -36,4 +41,7 @@ const CollectionNameController = {
   }
 };
 
+/***********|
+|* EXPORTS *|
+|***********/
 module.exports = CollectionNameController;
