@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import XPage from "./pages/XPage";
 import XPageTwo from "./pages/XPageTwo"
 import XCollection from "./pages/XCollection"
@@ -7,7 +8,7 @@ import XNoMatch from "./pages/XNoMatch";
 import { XNav } from "./components/XNav";
 
 const App = () => (
-  <Router>
+  <BrowserRouter>
     <div>
       <XNav />
       <Switch>
@@ -17,7 +18,7 @@ const App = () => (
         <Route component={XNoMatch} />
       </Switch>
     </div>
-  </Router>
+  </BrowserRouter>
 );
 
 export default App;
