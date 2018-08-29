@@ -8,7 +8,7 @@ import { XNav } from './components/XNav';
 
 class App extends Component {
   render() {
-    return <Router>
+    return <Router forceRefresh={!'pushState' in window.history}>
       <div>
         <XNav />
         <Switch>
